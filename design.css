@@ -7,7 +7,7 @@
 
 *{
   font-family: 'Roboto', sans-serif;
-  margin:0; padding:0;
+  margin:5; padding:0;
   box-sizing: border-box;
   outline: none; border:none;
   text-decoration: none;
@@ -75,7 +75,7 @@ section{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding:1.5rem 7%;
+  padding:1.8rem 7%;
   border-bottom: var(--border);
   position: fixed;
   top:0; left: 0; right: 0;
@@ -83,8 +83,8 @@ section{
 }
 
 .header .navbar a{
-  margin:0 1rem;
-  font-size: 1.6rem;
+  margin:0 1.7rem;
+  font-size: 2rem;
   color:#fff;
 }
 
@@ -169,6 +169,14 @@ section{
   color:#eee;
 }
 
+
+
+
+
+
+
+/*start about css */
+
 .about .row{
   display: flex;
   align-items: center;
@@ -199,8 +207,87 @@ section{
   padding:1rem 0;
   line-height: 1.8;
 }
+/*end about css */
 
-.menu .box-container{
+
+
+
+
+
+
+
+
+/*start Features css */
+
+.features .box-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap:1.5rem;
+}
+
+.features .box-container .box-f{
+  padding:5rem;
+  text-align: center;
+  border:var(--border);    
+}
+
+.features .box-container .box-f img{
+  height: 10rem;
+}
+
+.features .box-container .box-f h3{
+  color: #fff;
+  font-size: 2rem;
+  padding:1rem 0;
+}
+
+.features .box-container .box-f p{
+  color: #fff;
+  font-size: 1.5rem;
+  padding:1rem 0;
+}
+
+.features .box-container .box-f .price{
+  color: #fff;
+  font-size: 2.5rem;
+  padding:.5rem 0;
+}
+
+.features .box-container .box-f .price span{
+  font-size: 1.5rem;
+  text-decoration: line-through;
+  font-weight: lighter;
+}
+
+.features .box-container .box-f:hover{
+  background:#fff;
+}
+
+.features .box-container .box-f:hover > *{
+  color:var(--black);
+}
+
+.box-f{
+  background-color: #1a373a;
+  box-shadow: 05px 05px whitesmoke;
+  
+}
+
+/*ends Features css */
+
+
+
+
+
+
+
+
+
+
+
+/*start menu css */
+
+/*.menu .box-container{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   gap:1.5rem;
@@ -241,6 +328,291 @@ section{
 .menu .box-container .box:hover > *{
   color:var(--black);
 }
+ */
+
+
+
+
+
+
+
+/*start pricing css */
+
+/*.pricing .box-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap:1.5rem;
+}
+
+.pricing .box-container .box-pricing{
+  text-align: center;
+  border:var(--border);
+  padding: 2rem;
+}
+
+.pricing .box-container .box-pricing .icons a{
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  border:var(--border);
+  color:#fff;
+  margin:.3rem;
+}
+
+.pricing .box-container .box-pricing .icons a:hover{
+  background:var(--main-color);
+}
+
+.pricing .box-container .box-pricing .image{
+  padding: 2.5rem 0;
+}
+
+.pricing .box-container .box-pricing .image img{
+  height: 25rem;
+}
+
+.pricing .box-container .box-pricing .content h3{
+  color:#fff;
+  font-size: 2.5rem;
+}
+
+.pricing .box-container .box-pricing .content .stars{
+  padding: 1.5rem;
+}
+
+.pricing .box-container .box-pricing .content .stars i{
+  font-size: 1.7rem;
+  color: var(--main-color);
+}
+
+.pricing .box-container .box-pricing .content .price{
+  color:#fff;
+  font-size: 2.5rem;
+}
+
+.pricing .box-container .box-pricing .content .price span{
+  text-decoration: line-through;
+  font-weight: lighter;
+  font-size: 1.5rem;
+} */
+
+
+
+
+
+
+
+.pricing .box-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap:1.5rem;
+}
+
+
+.pricing .box-container .box-pricing h1{
+  padding:0;
+  font-size: 2.5rem;
+  color:#fff;
+}
+
+.pricing .box-container .box-pricing .stars i{
+  font-size: 1.5rem;
+  color:var(--main-color);
+}
+
+.box-pricing {
+  margin: 1rem;
+  width: 30rem;
+  height: 60rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+
+.fas{
+  padding:1rem 0;
+  text-align: center;
+  font-size: 2rem;
+  text-align: justify;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*start team css */
+
+.team .box-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap:1.5rem;
+}
+
+.team .box-container .box{
+  padding:5rem;
+  text-align: center;
+  border:var(--border);    
+}
+
+.team .box-container .box img{
+  height: 20rem;
+  width: 20rem;
+}
+
+.team .box-container .box h3{
+  color: #fff;
+  font-size: 2rem;
+  padding:1rem 0;
+}
+
+.team .box-container .box .price{
+  color: #fff;
+  font-size: 2.5rem;
+  padding:.5rem 0;
+}
+
+.team .box-container .box .price span{
+  font-size: 1.5rem;
+  text-decoration: line-through;
+  font-weight: lighter;
+}
+
+.team .box-container .box:hover{
+  background:#fff;
+}
+
+.team .box-container .box:hover > *{
+  color:var(--black);
+}
+
+h5{
+  color: #ccc;
+  font-size: 1.3rem;
+}
+ 
+
+/*ends team css */
+
+
+
+
+
+
+
+
+/*start review css */
+.review .box-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap:1.5rem;
+}
+
+.review .box-container .box-r{
+  border:var(--border);
+  text-align: center;
+  padding:3rem 2rem;
+}
+
+.review .box-container .box-r p{
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color:#ccc;
+  padding:2rem 0;
+}
+
+.review .box-container .box-r .user{
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.review .box-container .box-r h3{
+  padding:1rem 0;
+  font-size: 2rem;
+  color:#fff;
+}
+
+.review .box-container .box-r .stars i{
+  font-size: 1.5rem;
+  color:var(--main-color);
+}
+
+.box-r {
+  width: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+
+/*ends review css */
+
+
+
+
+
+
+
+
+/*start contact css */
+
+.contact .row{
+  display: flex;
+  background:var(--black);
+  flex-wrap: wrap;
+  gap:1rem;
+}
+
+.contact .row .map{
+  flex:1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.contact .row form{
+  flex:1 1 45rem;
+  padding:5rem 2rem;
+  text-align: center;
+}
+
+.contact .row form h3{
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  color:#fff;
+}
+
+.contact .row form .inputBox{
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background:var(--bg);
+  border:var(--border);
+}
+
+.contact .row form .inputBox span{
+  color:#fff;
+  font-size: 2rem;
+  padding-left: 2rem;
+}
+
+.contact .row form .inputBox input{
+  width: 100%;
+  padding:2rem;
+  font-size: 1.7rem;
+  color:#fff;
+  text-transform: none;
+  background:none;
+}
+
+/*ends contact css */
 
 
 
