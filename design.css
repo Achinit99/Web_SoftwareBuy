@@ -1,3 +1,10 @@
+:root{
+  --main-color: #EBD671;
+  --black: #05595B;
+  --bg:#062C30;
+  --border:.1rem var(--black)
+}
+
 *{
   font-family: 'Roboto', sans-serif;
   margin:0; padding:0;
@@ -8,37 +15,59 @@
   transition: .2s linear;
 }
 
-main{
-  min-height: 100vh;
-  /* 
-   background: linear-gradient(to right top,
-  #b8e2f7, #f3ddfa);
-  */
-  background: linear-gradient(to right bottom,
-  rgba(117, 245, 250, 0.842),
-  rgba(237, 128, 252, 0.459));
-  display: flex;
-  align-items: center;
-  justify-content: center;
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 9rem;
+  scroll-behavior: smooth;
 }
 
-.glass{
-  background: #20dfdf;
-  min-height: 82vh;
-  width: 90%;
-  /* 
-  background: linear-gradient(to right bottom,
-  rgba(63, 203, 207, 0.842),
-  rgba(236, 141, 248, 0.459));
-   */
-  background: linear-gradient(to right top,
-  #b8e2f7, #f3ddfa);
-  border-radius: 2.2rem;
+html::-webkit-scrollbar{
+  width: .8rem;
+}
 
+html::-webkit-scrollbar-track{
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+  background: #fff;
+  border-radius: 5rem;
 }
 
 body{
   background: var(--bg);
+}
+
+section{
+  padding:2rem 7%;
+}
+
+.heading{
+  text-align: center;
+  color:#fff;
+  text-transform: uppercase;
+  padding-bottom: 3.5rem;
+  font-size: 4rem;
+}
+
+.heading span{
+  color:var(--main-color);
+  text-transform: uppercase;
+}
+
+.btn{
+  margin-top: 1rem;
+  display: inline-block;
+  padding:.9rem 3rem;
+  font-size: 1.7rem;
+  color:#fff;
+  background: var(--main-color);
+  cursor: pointer;
+}
+
+.btn:hover{
+  letter-spacing: .2rem;
 }
 
 .header{
@@ -55,8 +84,8 @@ body{
 
 .header .navbar a{
   margin:0 1rem;
-  font-size: 1.5rem;
-  color:rgb(255, 255, 255);
+  font-size: 1.6rem;
+  color:#fff;
 }
 
 .header .navbar a:hover{
@@ -65,11 +94,162 @@ body{
   padding-bottom: .5rem;
 }
 
-.home .content{
-  min-height: 100vh;
-  align-items: center;
-  background: linear-gradient(to right bottom,
-  rgba(117, 245, 250, 0.842),
-  rgba(237, 128, 252, 0.459));
+.header .icons div{
+  color:#fff;
+  cursor: pointer;
+  font-size: 2.5rem;
+  margin-left: 2rem;
 }
+
+.header .icons div:hover{
+  color:var(--main-color);
+}
+
+#menu-btn{
+  display: none;
+}
+
+.header .search-form{
+  position: absolute;
+  top:115%; right: 7%;
+  background: #fff;
+  width: 50rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  transform: scaleY(0);
+  transform-origin: top;
+}
+
+.header .search-form.active{
+  transform: scaleY(1);
+}
+
+.header .search-form input{
+  height: 100%;
+  width: 100%;
+  font-size: 1.6rem;
+  color:var(--black);
+  padding:1rem;
+  text-transform: none;
+}
+
+.header .search-form label{
+  cursor: pointer;
+  font-size: 2.2rem;
+  margin-right: 1.5rem;
+  color:var(--black);
+}
+
+.header .search-form label:hover{
+  color:var(--main-color);
+}
+
+.home{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.home .content{
+  max-width: 60rem;
+}
+
+.home .content h3{
+  font-size: 5rem;
+  /*  text-transform: uppercase;*/
+  color:#fff;
+}
+
+.home .content p{
+  font-size: 2rem;
+  font-weight: lighter;
+  line-height: 1.2;
+  padding:1rem 0;
+  color:#eee;
+}
+
+.about .row{
+  display: flex;
+  align-items: center;
+  background:var(--black);
+  flex-wrap: wrap;
+}
+
+.about .row .image{
+  flex:1 1 45rem;
+}
+
+.about .row .image img{
+  width: 100%;
+}
+.about .row .content{
+  flex:1 1 45rem;
+  padding:2rem;
+}
+
+.about .row .content h3{
+  font-size: 3rem;
+  color:#fff;
+}
+
+.about .row .content p{
+  font-size: 1.6rem;
+  color:#ccc;
+  padding:1rem 0;
+  line-height: 1.8;
+}
+
+.menu .box-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap:1.5rem;
+}
+
+.menu .box-container .box{
+  padding:5rem;
+  text-align: center;
+  border:var(--border);    
+}
+
+.menu .box-container .box img{
+  height: 10rem;
+}
+
+.menu .box-container .box h3{
+  color: #fff;
+  font-size: 2rem;
+  padding:1rem 0;
+}
+
+.menu .box-container .box .price{
+  color: #fff;
+  font-size: 2.5rem;
+  padding:.5rem 0;
+}
+
+.menu .box-container .box .price span{
+  font-size: 1.5rem;
+  text-decoration: line-through;
+  font-weight: lighter;
+}
+
+.menu .box-container .box:hover{
+  background:#fff;
+}
+
+.menu .box-container .box:hover > *{
+  color:var(--black);
+}
+
+
+
+
+
+
+
+
+
+
+
 
