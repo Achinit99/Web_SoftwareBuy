@@ -84,7 +84,7 @@ section{
 
 .header .navbar a{
   margin:0 1.7rem;
-  font-size: 2rem;
+  font-size: 2.2rem;
   color:#fff;
 }
 
@@ -175,6 +175,12 @@ section{
 
 
 
+
+
+
+
+
+
 /*start about css */
 
 .about .row{
@@ -208,6 +214,9 @@ section{
   line-height: 1.8;
 }
 /*end about css */
+
+
+
 
 
 
@@ -401,7 +410,7 @@ section{
 
 
 
-
+/*start pricing css */
 
 .pricing .box-container{
   display: grid;
@@ -409,11 +418,50 @@ section{
   gap:1.5rem;
 }
 
+.pricing .box-container .box-pricing{
+  background-color: #1a373a;
+  text-align: center;
+  padding:3rem 3rem;
+  text-align: left;
+}
 
-.pricing .box-container .box-pricing h1{
-  padding:0;
+.pricing .box-container .box-pricing .fas{
+  font-size: 1.6rem;
+  line-height: 0.6rem;
+  color:#ccc;
+  padding:2rem 0;
+
+}
+
+.pricing .box-container .box-pricing .user{
+  height: 8rem;
+  width: 7rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.pricing .box-container .box-pricing h3{
+  padding:1rem 0;
   font-size: 2.5rem;
   color:#fff;
+  text-align: center;
+}
+
+.pricing .box-container .box-pricing h1{
+  padding:0.4rem 0;
+  font-size: 2.8rem;
+  color:#EBD671;
+  text-align: center;
+}
+
+.pricing .box-container .box-pricing .btn{
+  display: center;
+}
+
+h4{
+  font-size: 1.4rem;
+  color:#fff;
+  text-align: center;
 }
 
 .pricing .box-container .box-pricing .stars i{
@@ -422,21 +470,12 @@ section{
 }
 
 .box-pricing {
-  margin: 1rem;
-  width: 30rem;
-  height: 60rem;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 310px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
 }
 
-.fas{
-  padding:1rem 0;
-  text-align: center;
-  font-size: 2rem;
-  text-align: justify;
-}
-
-
+/*ends pricing css */
 
 
 
@@ -457,9 +496,10 @@ section{
 }
 
 .team .box-container .box{
-  padding:5rem;
+  padding:4rem;
   text-align: center;
-  border:var(--border);    
+  border:var(--border); 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19);   
 }
 
 .team .box-container .box img{
@@ -500,6 +540,11 @@ h5{
  
 
 /*ends team css */
+
+
+
+
+
 
 
 
@@ -553,6 +598,12 @@ h5{
 }
 
 /*ends review css */
+
+
+
+
+
+
 
 
 
@@ -623,5 +674,152 @@ h5{
 
 
 
+
+
+/*start footer css */
+
+.footer{
+  background:var(--black);
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.footer .share{
+  padding:1rem 0;
+}
+
+.footer .share a{
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  color:#fff;
+  border:var(--border);
+  margin:.3rem;
+  border-radius: 50%;
+}
+
+.footer .share a:hover{
+  background-color: var(--main-color);
+}
+
+.footer .links{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding:2rem 0;
+  gap:1rem;
+}
+
+.footer .links a{
+  padding:.7rem 2rem;
+  color:#fff;
+  border:var(--border);
+  font-size: 2rem;
+}
+
+.footer .links a:hover{
+  background:var(--main-color);
+}
+
+.footer .credit{
+  font-size: 2rem;
+  color:#fff;
+  font-weight: lighter;
+  padding:1.5rem;
+}
+
+.footer .credit span{
+  color:var(--main-color);
+}
+
+/*ends contact css */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries  */
+@media (max-width:991px){
+
+  html{
+      font-size: 55%;
+  }
+
+  .header{
+      padding:1.5rem 2rem;
+  }
+
+  section{
+      padding:2rem;
+  }
+
+}
+
+@media (max-width:768px){
+
+  #menu-btn{
+      display: inline-block;
+  }
+
+  .header .navbar{
+      position: absolute;
+      top:100%; right: -100%;
+      background: #fff;
+      width: 30rem;
+      height: calc(100vh - 9.5rem);
+  }
+
+  .header .navbar.active{
+      right:0;
+  }
+
+  .header .navbar a{
+      color:var(--black);
+      display: block;
+      margin:1.5rem;
+      padding:.5rem;
+      font-size: 2rem;
+  }
+
+  .header .search-form{
+      width: 90%;
+      right: 2rem;
+  }
+
+  .home{
+      background-position: left;
+      justify-content: center;
+      text-align: center;
+  }
+
+  .home .content h3{
+      font-size: 4.5rem;
+  }
+
+  .home .content p{
+      font-size: 1.5rem;
+  }
+
+}
+
+@media (max-width:450px){
+
+  html{
+      font-size: 50%;
+  }
+
+}
 
 
