@@ -39,6 +39,12 @@ body{
   background: var(--bg);
 }
 
+img{
+  height: 40%;
+  width: 40%;
+  margin-left: auto;
+}
+
 section{
   padding:2rem 7%;
 }
@@ -108,6 +114,22 @@ section{
 #menu-btn{
   display: none;
 }
+
+.btn-login{
+  margin-top: 1rem;
+  display: inline-block;
+  padding:.9rem 3rem;
+  font-size: 1.7rem;
+  color:#fff;
+  background: var(--main-color);
+  cursor: pointer;
+  border-radius: 1.5rem;
+}
+
+.btn-login:hover{
+  letter-spacing: .2rem;
+}
+
 
 .header .search-form{
   position: absolute;
@@ -595,7 +617,17 @@ h5{
   width: 250px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
+
 }
+
+.heading{
+  margin-top: 3rem;
+}
+
+.box-r1{
+  margin-top: 3rem;
+}
+
 
 /*ends review css */
 
@@ -629,7 +661,7 @@ h5{
 
 .contact .row form{
   flex:1 1 45rem;
-  padding:5rem 2rem;
+  padding:4rem 2rem;
   text-align: center;
 }
 
@@ -662,6 +694,12 @@ h5{
   text-transform: none;
   background:none;
 }
+
+.contact{
+  margin-top: 10rem;
+}
+
+
 
 /*ends contact css */
 
